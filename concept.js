@@ -42,9 +42,9 @@ function heroClass()
 		this.move = function()
 			{
 				if(this.up)this.y -= 1.1;
-				else if(this.down)this.y += 1.1;
-				else if(this.left)this.x-= 1.1; 
-				else if(this.right)this.x += 1.1;
+				if(this.down)this.y += 1.1;
+				if(this.left)this.x-= 1.1; 
+				if(this.right)this.x += 1.1;
 				
 				if(this.up && this.shoot){createLaser(this.x,this.y,1,0)}
 				if(this.right && this.shoot){createLaser(this.x,this.y,1,1)}
